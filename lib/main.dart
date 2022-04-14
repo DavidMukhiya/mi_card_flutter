@@ -10,10 +10,12 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
         backgroundColor: Colors.teal,
         body: SafeArea(
           child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               CircleAvatar(
                 radius: 60.0,
@@ -38,48 +40,43 @@ class MyApp extends StatelessWidget {
                   letterSpacing: 2.5,
                 ),
               ),
-              Container(
-                color: Colors.white,
-                margin: EdgeInsets.symmetric(vertical: 25.0, horizontal: 25.0),
-                padding: EdgeInsets.all(10.0),
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.phone,
-                      color: Colors.teal,
+              SizedBox(
+                child: Divider(
+                  color: Colors.teal.shade100,
+                ),
+                width: 150.0,
+                height: 10.0,
+              ),
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.phone,
+                    color: Colors.teal,
+                  ),
+                  title: Text(
+                    "626 228 5931",
+                    style: TextStyle(
+                      fontFamily: 'Source Sans Pro',
+                      fontSize: 20.0,
                     ),
-                    SizedBox(
-                      width: 20.0,
-                    ),
-                    Text(
-                      "626 228 5931",
-                      style: TextStyle(
-                          fontFamily: 'Source Sans Pro', fontSize: 20.0),
-                    ),
-                  ],
+                  ),
                 ),
               ),
-              Container(
-                color: Colors.white,
-                margin: EdgeInsets.symmetric(vertical: 25.0, horizontal: 25.0),
-                padding: EdgeInsets.all(10.0),
-                child: Row(
-                  children: [
-                    Icon(
-                      Icons.email,
-                      color: Colors.teal,
+              Card(
+                margin: EdgeInsets.symmetric(vertical: 10.0, horizontal: 25.0),
+                child: ListTile(
+                  leading: Icon(
+                    Icons.email,
+                    color: Colors.teal,
+                  ),
+                  title: Text(
+                    "david@email.com",
+                    style: TextStyle(
+                      fontSize: 20.0,
+                      fontFamily: 'Source Sans Pro',
                     ),
-                    SizedBox(
-                      width: 20.0,
-                    ),
-                    Text(
-                      "david@email.com",
-                      style: TextStyle(
-                        fontSize: 20.0,
-                        fontFamily: 'Source Sans Pro',
-                      ),
-                    ),
-                  ],
+                  ),
                 ),
               ),
             ],
