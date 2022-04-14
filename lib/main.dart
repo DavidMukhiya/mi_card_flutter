@@ -22,9 +22,20 @@ class MyApp extends StatelessWidget {
               Text(
                 "David Mukhiya",
                 style: TextStyle(
+                  fontFamily: 'Pacifico',
                   color: Colors.white,
                   fontSize: 40.0,
                   fontWeight: FontWeight.bold,
+                ),
+              ),
+              Text(
+                'FLUTTER DEVELOPER',
+                style: TextStyle(
+                  fontFamily: 'Source Sans pro',
+                  color: Colors.teal.shade50,
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold,
+                  letterSpacing: 2.5,
                 ),
               )
             ],
